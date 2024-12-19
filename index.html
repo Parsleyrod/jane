@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="Images/360_F_303471191_BnCZIdg5uS4l6Hicsf80x24mu782IKzJ.jpg" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Jobs</p>
+                    <h1>Hello,I'm<span>Jane</span><br> from Kenya</h1>
+                </div>
+            </div>
+        </div>
+            
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Images/Backgound.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About me</h1>
+                        <p1>I'm a passionate journalism enthusiast with a keen eye for storytelling and a commitment to uncovering the truth.
+                            My journey began at a young age when I discovered the power of words to inform and inspire.
+                            I thrive on investigative reporting, digging deep into stories to hold powerful entities accountable,
+                            and I'm particularly interested in social issues like justice and human rights. With strong research skills and adaptability in the fast-paced media landscape,
+                            I aim to combine multimedia storytelling to engage diverse audiences.
+                            My goal is to work for reputable news organizations and contribute to impactful stories that shape society and foster informed communities.</p1>
+
+                            <div class="tab-title">
+                                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="Skills">
+                                <ul>
+                                    <li><span>Design</span><br>Content Creation</li>
+                                    <li><span>Videography</span><br>Shooting content</li>
+                                    <li><span>Journalism</span><br>Sharing news</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Experience">
+                                <ul>
+                                    <li><span>Design</span><br>Creation of interfaces</li>
+                                    <li><span>2023-2024</span><br>Worked for Nation Standard Media</li>
+                                    <li><span>2022-2023</span><br>Freelancing</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Education">
+                                <ul>
+                                    <li><span>2020-2024</span><br>Multimedia University</li>
+                                    <li><span>2023-2024</span><br>High School</li>
+                                    <li><span>2022-2023</span><br>Primary</li>
+                                </ul>
+                            </div>
+                            <!---------------services-->
+                            <div id="services">
+                                <div class="container">
+                                    <h1 class="sub-title">My Services</h1>
+                                    <div class="services-list">
+                                            <h2>Content Creation</h2>
+                                    </div>
+                                    <div>
+                                            <P>I’m a content creator specializing in multimedia production and storytelling.
+                                                With a background in videography and design, I craft engaging narratives that connect with audiences. 
+                                                I love exploring new trends and creating impactful content.</p>
+                                                <a href="#">Learn more</a>
+                                        </div>
+                                        <div>
+                                            <h2>Videography</h2>
+                                            <p>
+                                                I’m a passionate videographer dedicated to capturing stories through the lens.
+                                                With a keen eye for detail and a love for visual storytelling,
+                                                I create compelling videos that engage and inspire. From concept to final edit,
+                                                I strive to bring every vision to life.</p>
+                                                <a href="#">Learn more</a>
+                                        </div>
+                                        <div>
+                                            <h2>Journalism</h2>
+                                            <p>
+                                                I’m a dedicated journalist with a passion for uncovering stories that matter.
+                                                With a focus on research and storytelling,
+                                                I strive to inform and engage audiences through compelling narratives.
+                                                I believe in the power of journalism to drive change and foster understanding.</p>
+                                                <a href="#">Learn more</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <script>
+                                var tablinks = document.getElementsByClassName("tab-links");
+                                var tabcontents = document.getElementsByClassName("tab-contents");
+                            
+                                function opentab(tabname) {
+                                    for (var tablink of tablinks) {
+                                        tablink.classList.remove("active-link");
+                                    }
+                                    for (var tabcontent of tabcontents) {
+                                        tabcontent.classList.remove("active-tab");
+                                    }
+                                    // Set the active tab and content
+                                    document.querySelector(`.tab-links[onclick="opentab('${tabname}')"]`).classList.add("active-link");
+                                    document.getElementById(tabname).classList.add("active-tab");
+                            
+                                    
+        }
+        </script>
+
+    </body>
+</html>
